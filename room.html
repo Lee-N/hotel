@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>房间信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+</head>
+<style>
+    body{
+        padding: 0px 10px 0px 10px;
+        font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        color: #676a6c;
+        line-height: 1.42857143;
+    }
+    table {
+        border-spacing: 0;
+        border-collapse: collapse
+    }
+    .btn-group-xs > .btn, .btn-xs {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc
+    }
+    .modal .form-control,.modal button{
+        font-size: 13px !important;
+    }
+</style>
+<body>
+<div id="toolbar">
+    <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+        <a type="button" class="btn btn-default" data-toggle="modal" data-target="#add-form" id="add">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<table id="table">
+
+</table>
+<!--新增模态框-->
+<div id="add-form" class="modal fade " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <h3 class="m-t-none m-b">添加房间</h3>
+                    <hr>
+                    <form id="addForm" role="form">
+                        <div class="form-group">
+                            <label>房间名称：</label>
+                            <input id="name" type="text" name="name" placeholder="请输入名称" class="form-control"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label>类型：</label>
+                            <select id="type" class="form-control">
+                                <option value="大床房">大床房</option>
+                                <option value="双床房">双床房</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>价格：</label>
+                            <input id="price" type="number" name="price" placeholder="请输入价格" class="form-control"
+                                   required>
+                        </div>
+                        <div style="text-align: right">
+                            <button class="btn btn-sm btn-primary" type="button"
+                                    id="add-button" ><strong>提交</strong></button>
+                            <button class="btn btn-sm btn-white" type="button"
+                                    data-toggle="modal" data-target="#add-form"><strong>取消</strong></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--修改模态框-->
+<div id="update-form" class="modal fade " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <h3 class="m-t-none m-b">修改房间</h3>
+                    <hr>
+                    <form id="updateForm" role="form">
+                        <input id="ID" hidden>
+                        <div class="form-group">
+                            <label>房间名称：</label>
+                            <input id="newName" type="text" name="newName" placeholder="请输入名称" class="form-control"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label>类型：</label>
+                            <select id="newType" class="form-control">
+                                <option value="大床房">大床房</option>
+                                <option value="双床房">双床房</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>价格：</label>
+                            <input id="newPrice" type="number" name="newPrice" placeholder="请输入价格" class="form-control"
+                                   required>
+                        </div>
+                        <div style="text-align: right">
+                            <button class="btn btn-sm btn-primary" type="button"
+                                    id="update-button" ><strong>提交</strong></button>
+                            <button class="btn btn-sm btn-white" type="button"
+                                    data-toggle="modal" data-target="#update-form"><strong>取消</strong></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/room.js"></script>
+</body>
+</html>

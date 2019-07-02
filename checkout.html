@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退房/续住</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+<style>
+    body{
+        padding: 0px 10px 0px 10px;
+        font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        color: #676a6c;
+        line-height: 1.42857143;
+    }
+    table {
+        border-spacing: 0;
+        border-collapse: collapse
+    }
+    .btn-group-xs > .btn, .btn-xs {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc
+    }
+    .modal .form-control,.modal button{
+        font-size: 13px !important;
+    }
+</style>
+<body>
+<table id="table">
+
+</table>
+
+<!--续住模态框-->
+<div id="continue-form" class="modal fade " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <h3 class="m-t-none m-b">办理续住</h3>
+                    <hr>
+                    <form id="checkinForm" role="form">
+                        <input id="ID" hidden>
+                        <div class="form-group">
+                            <label>入住日期：</label>
+                            <input id="from" type="date" name="from" placeholder="入住日期" class="form-control"
+                            disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>续住日期：</label>
+                            <input id="to" type="date" name="to" placeholder="续住日期" class="form-control"
+                            >
+                        </div>
+                        <div style="text-align: right">
+                            <button class="btn btn-sm btn-primary" type="button"
+                                    id="continue-button" ><strong>提交</strong></button>
+                            <button class="btn btn-sm btn-white" type="button"
+                                    data-toggle="modal" data-target="#continue-form"><strong>取消</strong></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
