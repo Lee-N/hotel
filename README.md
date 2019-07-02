@@ -4,7 +4,7 @@
 额外加了用户部分的功能，不过总算第三天上午写完了  
 #### ps:手动搭了一个后台管理系统的框架，懒得单独弄出来了 反正就index.html index.js index.css
 效果图:
-![shot](https://github.com/Lee-N/hotel/img/img.png)
+![shot](https://github.com/Lee-N/hotel/blob/master/img/img.png)
 
 - 前端:jquery+bootstrap4  
 - 后端:node.js  
