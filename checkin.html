@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>办理入住</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+<style>
+    body{
+        padding: 0px 10px 0px 10px;
+        font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        color: #676a6c;
+        line-height: 1.42857143;
+    }
+    table {
+        border-spacing: 0;
+        border-collapse: collapse
+    }
+    .btn-group-xs > .btn, .btn-xs {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc
+    }
+    .modal .form-control,.modal button{
+        font-size: 13px !important;
+    }
+</style>
+<body>
+<table id="table">
+
+</table>
+
+<!--办理入住模态框-->
+<div id="checkin-form" class="modal fade " aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <h3 class="m-t-none m-b">房间预定</h3>
+                    <hr>
+                    <form id="checkinForm" role="form">
+                        <input id="ID" hidden>
+                        <div class="form-group">
+                            <label>房间名称：</label>
+                            <input id="name" type="text" name="name" placeholder="请输入名称" class="form-control"
+                                   disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>类型：</label>
+                            <select id="type" class="form-control" disabled>
+                                <option value="大床房">大床房</option>
+                                <option value="双床房">双床房</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>价格：</label>
+                            <input id="price" type="number" name="price" placeholder="请输入价格" class="form-control"
+                                   disabled>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label>入住人姓名：</label>
+                            <input id="Cname" type="text" name="Cname" placeholder="入住人姓名" class="form-control"
+                                   >
+                        </div>
+                        <div class="form-group">
+                            <label>身份证号：</label>
+                            <input id="CID" type="number" name="CID" placeholder="入住人身份证号" class="form-control"
+                                   >
+                        </div>
+                        <div class="form-group">
+                            <label>入住日期：</label>
+                            <input id="from" type="date" name="from" placeholder="入住日期" class="form-control"
+                                   >
+                        </div>
+                        <div class="form-group">
+                            <label>退房日期：</label>
+                            <input id="to" type="date" name="to" placeholder="退房日期" class="form-control"
+                                   >
+                        </div>
+                        <div style="text-align: right">
+                            <button class="btn btn-sm btn-primary" type="button"
+                                    id="checkin-button" ><strong>提交</strong></button>
+                            <button class="btn btn-sm btn-white" type="button"
+                                    data-toggle="modal" data-target="#checkin-form"><strong>取消</strong></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/checkin.js"></script>
+</body>
+</html>
